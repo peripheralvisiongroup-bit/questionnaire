@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peripheral Vision Research Collaboration</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #E6002E 0%, #8B0000 100%);
+            padding: 40px;
+            min-height: 100vh;
+        }
+        
+        .poster {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #E6002E 0%, #B8860B 50%, #8B0000 100%);
+            color: white;
+            padding: 60px 80px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><circle cx="50" cy="50" r="30" fill="rgba(255,255,255,0.05)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .unibern-logo {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            opacity: 0.95;
+        }
+        
+        .header h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header .subtitle {
+            font-size: 1.8em;
+            font-weight: 300;
+            opacity: 0.95;
+            margin-top: 15px;
+        }
+        
+        .content {
+            padding: 60px 80px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #E6002E 0%, #B8860B 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(220, 20, 60, 0.3);
+        }
+        
+        .highlight-box h2 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+        
+        .highlight-box p {
+            font-size: 1.3em;
+            line-height: 1.6;
+        }
+        
+        .project-title {
+            background: #F5F5DC;
+            border-left: 6px solid #B8860B;
+            padding: 25px 30px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+        }
+        
+        .project-title h3 {
+            color: #E6002E;
+            font-size: 1.8em;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        
+        .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 15px;
+        }
+        
+        .keyword-tag {
+            background: #E6002E;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.95em;
+            font-weight: 500;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+        }
+        
+        .section h2 {
+            color: #E6002E;
+            font-size: 2.5em;
+            margin-bottom: 25px;
+            border-bottom: 4px solid #B8860B;
+            padding-bottom: 15px;
+        }
+        
+        .section h3 {
+            color: #8B0000;
+            font-size: 1.8em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .section p, .section li {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .section ul {
+            margin-left: 30px;
+            margin-top: 15px;
+        }
+        
+        .section li {
+            margin-bottom: 12px;
+        }
+        
+        .section li::marker {
+            color: #E6002E;
+        }
+        
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .benefit-card {
+            background: linear-gradient(135deg, #E6002E 0%, #8B0000 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(220, 20, 60, 0.2);
+            border: 2px solid #B8860B;
+        }
+        
+        .benefit-card h4 {
+            font-size: 1.5em;
+            margin-bottom: 12px;
+            color: #FFD700;
+        }
+        
+        .benefit-card p {
+            color: white;
+            font-size: 1.1em;
+            margin: 0;
+        }
+        
+        .context-box {
+            background: #FFF9E6;
+            border: 2px solid #B8860B;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+        
+        .context-box h3 {
+            color: #E6002E;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+        
+        .context-box p {
+            font-size: 1.15em;
+            line-height: 1.7;
+            color: #333;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #E6002E 0%, #B8860B 50%, #8B0000 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 50px;
+            box-shadow: 0 10px 30px rgba(220, 20, 60, 0.3);
+        }
+        
+        .cta-section h2 {
+            color: white;
+            border: none;
+            font-size: 2.5em;
+            margin-bottom: 25px;
+        }
+        
+        .cta-section p {
+            font-size: 1.4em;
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .contact-placeholder {
+            background: white;
+            color: #E6002E;
+            padding: 20px 40px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: 600;
+            font-size: 1.2em;
+            border: 3px solid #B8860B;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+            
+            .poster {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <div class="header">
+            <div class="header-content">
+                <div class="unibern-logo">UNIVERSITY OF BERN</div>
+                <h1>JOIN US IN PIONEERING RESEARCH</h1>
+                <div class="subtitle">Developing the First Peripheral Vision Questionnaire</div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="project-title">
+                <h3>Mechanisms of Peripheral Vision in Complex Decision Making</h3>
+                <div class="keywords">
+                    <span class="keyword-tag">Decision-Making</span>
+                    <span class="keyword-tag">Peripheral Vision</span>
+                    <span class="keyword-tag">Gaze Behavior</span>
+                    <span class="keyword-tag">Covert Attention</span>
+                    <span class="keyword-tag">Virtual Reality</span>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <h2>🎯 The Opportunity</h2>
+                <p>We are seeking motivated psychology and sport science students to collaborate on groundbreaking research developing the first validated questionnaire for assessing peripheral vision awareness and usage in team sport athletes. This represents an exceptional opportunity for Master's thesis work that bridges basic vision science with applied sport performance research.</p>
+            </div>
+            
+            <div class="context-box">
+                <h3>Research Context</h3>
+                <p>Peripheral vision is crucial for complex decision-making in dynamic environments, from driving during rush hour to team sports competition. While research has identified key factors affecting peripheral perception (crowding, eccentricity, predictions, dual tasks), there remains a critical gap: we lack tools to measure how athletes subjectively rate their usage of peripheral vision in real-world performance contexts. This project bridges basic and applied science by developing assessment tools that work in authentic sport environments.</p>
+            </div>
+            
+            <div class="section">
+                <h2>Research Focus</h2>
+                <p>Athletes in team sports rely heavily on peripheral vision to track teammates, opponents, and the ball simultaneously. Yet we lack reliable subjective measures to complement objective performance indices. This research aims to bridge that gap. This project is part of a larger initiative with aim to better understand mechanisms of peripheral vision in complex decision making (SNF Grant number
+211220). </p>
+                
+                <h3>What We Do?</h3>
+                <p>Our research uses ecologically valid experimental paradigms to understand how peripheral vision functions in complex, dynamic decision-making situations. Watch how we study peripheral vision in VR scenarios:</p>
+                
+                <div style="max-width: 640px; margin: 30px auto;">
+                    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+                        <iframe src="https://unibe365-my.sharepoint.com/personal/christian_vater_unibe_ch/_layouts/15/embed.aspx?UniqueId=dc449308-d543-45c7-ade6-129b62d0e214&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="Experiment3v3_05 1.mp4" style="border:none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: 100%; max-width: 100%;"></iframe>
+                    </div>
+                </div>
+                
+                <p style="text-align: center; margin-top: 25px;">
+                    <a href="https://www.ispw.unibe.ch/research/peripheral_vision_group/index_eng.html" target="_blank" style="color: #E6002E; font-weight: 600; font-size: 1.15em; text-decoration: none; border-bottom: 2px solid #B8860B; padding-bottom: 3px;">
+                        Learn more about Peripheral Vision Group →
+                    </a>
+                </p>
+                
+                <h3>What You'll Develop:</h3>
+                <p>Working from an existing database of approximately 70 statements related to peripheral vision mechanisms, you will:</p>
+                <ul>
+                    <li>Refine and validate a questionnaire measuring peripheral vision awareness in team sport athletes</li>
+                    <li>Conduct validation studies with athletes ranging from amateur to 1st league level</li>
+                    <li>Pilot test the instrument in real-world team sport contexts (primarily football and basketball)</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>What You'll Gain</h2>
+                <div class="benefits">
+                    <div class="benefit-card">
+                        <h4>🏆 Elite Sport Access</h4>
+                        <p>Work directly with 1st and 3rd league team sport athletes, gaining unprecedented access to elite sport environments (partnership with BSC Young Boys Bern) </p>
+                    </div>
+                    <div class="benefit-card">
+                        <h4>📊 Laboratory Experience</h4>
+                        <p>Access to state-of-the-art equipment and objective peripheral vision testing protocols, including virtual reality paradigms</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h4>📚 Co-authorship</h4>
+                        <p>Opportunity for co-authorship on scientific publications emerging from this research</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h4>🌐 Scientific Presence</h4>
+                        <p>Establish your presence in both academic circles and the elite sport industry</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Ideal Candidates</h2>
+                <p>We welcome students from psychology, sport science, and related disciplines who are:</p>
+                <ul>
+                    <li>Pursuing or planning a Master's thesis</li>
+                    <li>Interested in the intersection of perception, cognition, and sport performance</li>
+                    <li>Motivated to develop rigorous assessment tools that bridge lab and field research</li>
+                    <li> Experience with statistics, questionnaire development</li>
+                </ul>
+                <p><strong>Desirable but not essential:</strong> Passionate about contributing to elite sport science with real-world applications, applied psychology, or team sport participation</p>
+            </div>
+            
+            <div class="section">
+                <h2>Project Scope</h2>
+                <p>This is a substantial research project designed to serve as a complete Master's thesis. Expected deliverables include:</p>
+                <ul>
+                    <li>Questionnaire refinement and item analysis</li>
+                    <li>Validation study design and execution</li>
+                    <li>Pilot testing with team sport athletes across skill levels</li>
+                    <li>Complete thesis manuscript and potential publication</li>
+                </ul>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Ready to Make Your Mark?</h2>
+                <p>This is your chance to pioneer a new assessment tool that will be used by researchers and practitioners in sport science for years to come.</p>
+                <p><strong>Contact us with if you have any questions:</strong></p>
+                <div class="contact-placeholder"> Peripheralvisiongroup@gmail.com </div>
+
+                <p style="text-align: center; margin-top: 25px;">
+                    <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=ejgA1C8h6kOsf3eqEteXflBO63yjQgdGqbU30PLSkxhURUpBMzRTSjZaM0UyR0tGWVUwRVc4TlFHQi4u" target="_blank" style="color: white; font-weight: 600; font-size: 1.15em; text-decoration: none; border-bottom: 2px solid #B8860B; padding-bottom: 3px;">
+                        Interested? Apply here →
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
