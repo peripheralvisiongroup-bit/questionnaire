@@ -12,8 +12,8 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #E6002E 0%, #8B0000 100%);
+            font-family: Arial, Helvetica, sans-serif;
+            background: #E6002E;
             padding: 40px;
             min-height: 100vh;
         }
@@ -22,55 +22,47 @@
             max-width: 1200px;
             margin: 0 auto;
             background: white;
-            border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             overflow: hidden;
         }
         
         .header {
-            background: linear-gradient(135deg, #E6002E 0%, #B8860B 50%, #8B0000 100%);
-            color: white;
+            background: white;
+            color: #E4003C;
             padding: 60px 80px;
             text-align: center;
             position: relative;
         }
         
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><circle cx="50" cy="50" r="30" fill="rgba(255,255,255,0.05)"/></svg>');
-            opacity: 0.3;
-        }
-        
-        .header-content {
-            position: relative;
-            z-index: 1;
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
         }
         
         .unibern-logo {
             font-size: 1.2em;
-            font-weight: 600;
-            margin-bottom: 20px;
+            font-weight: 700;
             letter-spacing: 2px;
-            opacity: 0.95;
+        }
+        
+        .unibe-logo-img {
+            height: 70px;
+            width: auto;
         }
         
         .header h1 {
+            font-family: Arial, Helvetica, sans-serif;
             font-size: 3.5em;
             font-weight: 700;
             margin-bottom: 20px;
             line-height: 1.2;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
         
         .header .subtitle {
             font-size: 1.8em;
             font-weight: 300;
-            opacity: 0.95;
             margin-top: 15px;
         }
         
@@ -79,17 +71,16 @@
         }
         
         .highlight-box {
-            background: linear-gradient(135deg, #E6002E 0%, #B8860B 100%);
+            background: #E6002E;
             color: white;
             padding: 40px;
-            border-radius: 15px;
             margin-bottom: 50px;
-            box-shadow: 0 10px 30px rgba(220, 20, 60, 0.3);
         }
         
         .highlight-box h2 {
             font-size: 2.2em;
             margin-bottom: 20px;
+            font-weight: 700;
         }
         
         .highlight-box p {
@@ -98,11 +89,10 @@
         }
         
         .project-title {
-            background: #F5F5DC;
-            border-left: 6px solid #B8860B;
+            background: #F5F5F5;
+            border-left: 6px solid #E6002E;
             padding: 25px 30px;
             margin-bottom: 40px;
-            border-radius: 8px;
         }
         
         .project-title h3 {
@@ -123,7 +113,6 @@
             background: #E6002E;
             color: white;
             padding: 8px 16px;
-            border-radius: 20px;
             font-size: 0.95em;
             font-weight: 500;
         }
@@ -136,15 +125,17 @@
             color: #E6002E;
             font-size: 2.5em;
             margin-bottom: 25px;
-            border-bottom: 4px solid #B8860B;
+            font-weight: 700;
             padding-bottom: 15px;
+            border-bottom: 3px solid #E6002E;
         }
         
         .section h3 {
-            color: #8B0000;
+            color: #000000;
             font-size: 1.8em;
             margin-top: 30px;
             margin-bottom: 15px;
+            font-weight: 700;
         }
         
         .section p, .section li {
@@ -175,18 +166,15 @@
         }
         
         .benefit-card {
-            background: linear-gradient(135deg, #E6002E 0%, #8B0000 100%);
+            background: #E6002E;
             color: white;
             padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(220, 20, 60, 0.2);
-            border: 2px solid #B8860B;
         }
         
         .benefit-card h4 {
             font-size: 1.5em;
             margin-bottom: 12px;
-            color: #FFD700;
+            font-weight: 700;
         }
         
         .benefit-card p {
@@ -196,10 +184,8 @@
         }
         
         .context-box {
-            background: #FFF9E6;
-            border: 2px solid #B8860B;
+            background: #F5F5F5;
             padding: 30px;
-            border-radius: 12px;
             margin-bottom: 40px;
         }
         
@@ -207,6 +193,7 @@
             color: #E6002E;
             font-size: 1.6em;
             margin-bottom: 15px;
+            font-weight: 700;
         }
         
         .context-box p {
@@ -216,13 +203,11 @@
         }
         
         .cta-section {
-            background: linear-gradient(135deg, #E6002E 0%, #B8860B 50%, #8B0000 100%);
+            background: #E6002E;
             color: white;
             padding: 50px;
-            border-radius: 15px;
             text-align: center;
             margin-top: 50px;
-            box-shadow: 0 10px 30px rgba(220, 20, 60, 0.3);
         }
         
         .cta-section h2 {
@@ -230,6 +215,7 @@
             border: none;
             font-size: 2.5em;
             margin-bottom: 25px;
+            font-weight: 700;
         }
         
         .cta-section p {
@@ -242,12 +228,25 @@
             background: white;
             color: #E6002E;
             padding: 20px 40px;
-            border-radius: 10px;
             display: inline-block;
             margin-top: 20px;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 1.2em;
-            border: 3px solid #B8860B;
+        }
+        
+        .link-cta {
+            color: white;
+            font-weight: 700;
+            font-size: 1.15em;
+            text-decoration: underline;
+            padding-bottom: 3px;
+        }
+        
+        .link-text {
+            color: #E6002E;
+            font-weight: 700;
+            font-size: 1.15em;
+            text-decoration: underline;
         }
         
         @media print {
@@ -265,11 +264,12 @@
 <body>
     <div class="poster">
         <div class="header">
-            <div class="header-content">
+            <div class="header-top">
                 <div class="unibern-logo">UNIVERSITY OF BERN</div>
-                <h1>JOIN US IN PIONEERING RESEARCH</h1>
-                <div class="subtitle">Developing the First Peripheral Vision Questionnaire</div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Logo_Universität_Bern.svg" alt="University of Bern Logo" class="unibe-logo-img">
             </div>
+            <h1>JOIN US IN PIONEERING RESEARCH</h1>
+            <div class="subtitle">Developing the First Peripheral Vision Questionnaire</div>
         </div>
         
         <div class="content">
@@ -296,20 +296,19 @@
             
             <div class="section">
                 <h2>Research Focus</h2>
-                <p>Athletes in team sports rely heavily on peripheral vision to track teammates, opponents, and the ball simultaneously. Yet we lack reliable subjective measures to complement objective performance indices. This research aims to bridge that gap. This project is part of a larger initiative with aim to better understand mechanisms of peripheral vision in complex decision making (SNF Grant number
-211220). </p>
+                <p>Athletes in team sports rely heavily on peripheral vision to track teammates, opponents, and the ball simultaneously. Yet we lack reliable subjective measures to complement objective performance indices. This research aims to bridge that gap. This project is part of a larger initiative with aim to better understand mechanisms of peripheral vision in complex decision making (SNF Grant number 211220).</p>
                 
                 <h3>What We Do?</h3>
                 <p>Our research uses ecologically valid experimental paradigms to understand how peripheral vision functions in complex, dynamic decision-making situations. Watch how we study peripheral vision in VR scenarios:</p>
                 
                 <div style="max-width: 640px; margin: 30px auto;">
-                    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+                    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
                         <iframe src="https://unibe365-my.sharepoint.com/personal/christian_vater_unibe_ch/_layouts/15/embed.aspx?UniqueId=dc449308-d543-45c7-ade6-129b62d0e214&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="Experiment3v3_05 1.mp4" style="border:none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: 100%; max-width: 100%;"></iframe>
                     </div>
                 </div>
                 
                 <p style="text-align: center; margin-top: 25px;">
-                    <a href="https://www.ispw.unibe.ch/research/peripheral_vision_group/index_eng.html" target="_blank" style="color: #E6002E; font-weight: 600; font-size: 1.15em; text-decoration: none; border-bottom: 2px solid #B8860B; padding-bottom: 3px;">
+                    <a href="https://www.ispw.unibe.ch/research/peripheral_vision_group/index_eng.html" target="_blank" class="link-text">
                         Learn more about Peripheral Vision Group →
                     </a>
                 </p>
@@ -328,7 +327,7 @@
                 <div class="benefits">
                     <div class="benefit-card">
                         <h4>🏆 Elite Sport Access</h4>
-                        <p>Work directly with 1st and 3rd league team sport athletes, gaining unprecedented access to elite sport environments (partnership with BSC Young Boys Bern) </p>
+                        <p>Work directly with 1st and 3rd league team sport athletes, gaining unprecedented access to elite sport environments (partnership with BSC Young Boys Bern)</p>
                     </div>
                     <div class="benefit-card">
                         <h4>📊 Laboratory Experience</h4>
@@ -352,7 +351,7 @@
                     <li>Pursuing or planning a Master's thesis</li>
                     <li>Interested in the intersection of perception, cognition, and sport performance</li>
                     <li>Motivated to develop rigorous assessment tools that bridge lab and field research</li>
-                    <li> Experience with statistics, questionnaire development</li>
+                    <li>Experienced with statistics, questionnaire development</li>
                 </ul>
                 <p><strong>Desirable but not essential:</strong> Passionate about contributing to elite sport science with real-world applications, applied psychology, or team sport participation</p>
             </div>
@@ -371,11 +370,11 @@
             <div class="cta-section">
                 <h2>Ready to Make Your Mark?</h2>
                 <p>This is your chance to pioneer a new assessment tool that will be used by researchers and practitioners in sport science for years to come.</p>
-                <p><strong>Contact us with if you have any questions:</strong></p>
-                <div class="contact-placeholder"> Peripheralvisiongroup@gmail.com </div>
+                <p><strong>Contact us if you have any questions: Peripheralvisiongroup@gmail.com
+</strong></p>
 
                 <p style="text-align: center; margin-top: 25px;">
-                    <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=ejgA1C8h6kOsf3eqEteXflBO63yjQgdGqbU30PLSkxhURUpBMzRTSjZaM0UyR0tGWVUwRVc4TlFHQi4u" target="_blank" style="color: white; font-weight: 600; font-size: 1.15em; text-decoration: none; border-bottom: 2px solid #B8860B; padding-bottom: 3px;">
+                    <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=ejgA1C8h6kOsf3eqEteXflBO63yjQgdGqbU30PLSkxhURUpBMzRTSjZaM0UyR0tGWVUwRVc4TlFHQi4u" target="_blank" class="link-cta">
                         Interested? Apply here →
                     </a>
                 </p>
