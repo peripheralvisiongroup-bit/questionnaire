@@ -14,7 +14,7 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: #E6002E;
-            padding: 40px;
+            padding: 0;
             min-height: 100vh;
         }
         
@@ -22,14 +22,14 @@
             max-width: 1200px;
             margin: 0 auto;
             background: white;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            box-shadow: none;
             overflow: hidden;
         }
         
         .header {
-            background: white;
-            color: #E4003C;
-            padding: 60px 80px;
+            background: #E6002E;
+            color: white;
+            padding: 30px 20px;
             text-align: center;
             position: relative;
         }
@@ -38,66 +38,68 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
         }
         
         .unibern-logo {
-            font-size: 1.2em;
+            font-size: 0.9em;
             font-weight: 700;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
         }
         
         .unibe-logo-img {
-            height: 70px;
+            height: 45px;
             width: auto;
         }
         
         .header h1 {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 3.5em;
+            font-size: 1.8em;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             line-height: 1.2;
         }
         
         .header .subtitle {
-            font-size: 1.8em;
+            font-size: 1.1em;
             font-weight: 300;
-            margin-top: 15px;
+            margin-top: 10px;
         }
         
         .content {
-            padding: 60px 80px;
+            padding: 30px 20px;
         }
         
         .highlight-box {
             background: #E6002E;
             color: white;
-            padding: 40px;
-            margin-bottom: 50px;
+            padding: 25px 20px;
+            margin-bottom: 30px;
         }
         
         .highlight-box h2 {
-            font-size: 2.2em;
-            margin-bottom: 20px;
+            font-size: 1.5em;
+            margin-bottom: 15px;
             font-weight: 700;
         }
         
         .highlight-box p {
-            font-size: 1.3em;
+            font-size: 1em;
             line-height: 1.6;
         }
         
         .project-title {
             background: #F5F5F5;
             border-left: 6px solid #E6002E;
-            padding: 25px 30px;
-            margin-bottom: 40px;
+            padding: 20px;
+            margin-bottom: 30px;
         }
         
         .project-title h3 {
             color: #E6002E;
-            font-size: 1.8em;
+            font-size: 1.3em;
             margin-bottom: 12px;
             font-weight: 700;
         }
@@ -105,53 +107,53 @@
         .keywords {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 15px;
+            gap: 8px;
+            margin-top: 12px;
         }
         
         .keyword-tag {
             background: #E6002E;
             color: white;
-            padding: 8px 16px;
-            font-size: 0.95em;
+            padding: 6px 12px;
+            font-size: 0.8em;
             font-weight: 500;
         }
         
         .section {
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
         
         .section h2 {
             color: #E6002E;
-            font-size: 2.5em;
-            margin-bottom: 25px;
+            font-size: 1.8em;
+            margin-bottom: 20px;
             font-weight: 700;
-            padding-bottom: 15px;
+            padding-bottom: 12px;
             border-bottom: 3px solid #E6002E;
         }
         
         .section h3 {
             color: #000000;
-            font-size: 1.8em;
-            margin-top: 30px;
-            margin-bottom: 15px;
+            font-size: 1.4em;
+            margin-top: 25px;
+            margin-bottom: 12px;
             font-weight: 700;
         }
         
         .section p, .section li {
-            font-size: 1.2em;
-            line-height: 1.8;
+            font-size: 1em;
+            line-height: 1.7;
             color: #333;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
         
         .section ul {
-            margin-left: 30px;
-            margin-top: 15px;
+            margin-left: 25px;
+            margin-top: 12px;
         }
         
         .section li {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
         
         .section li::marker {
@@ -160,44 +162,44 @@
         
         .benefits {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            margin-top: 30px;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-top: 20px;
         }
         
         .benefit-card {
             background: #E6002E;
             color: white;
-            padding: 30px;
+            padding: 20px;
         }
         
         .benefit-card h4 {
-            font-size: 1.5em;
-            margin-bottom: 12px;
+            font-size: 1.2em;
+            margin-bottom: 10px;
             font-weight: 700;
         }
         
         .benefit-card p {
             color: white;
-            font-size: 1.1em;
+            font-size: 0.95em;
             margin: 0;
         }
         
         .context-box {
             background: #F5F5F5;
-            padding: 30px;
-            margin-bottom: 40px;
+            padding: 20px;
+            margin-bottom: 30px;
         }
         
         .context-box h3 {
             color: #E6002E;
-            font-size: 1.6em;
-            margin-bottom: 15px;
+            font-size: 1.4em;
+            margin-bottom: 12px;
             font-weight: 700;
         }
         
         .context-box p {
-            font-size: 1.15em;
+            font-size: 1em;
             line-height: 1.7;
             color: #333;
         }
@@ -205,39 +207,40 @@
         .cta-section {
             background: #E6002E;
             color: white;
-            padding: 50px;
+            padding: 30px 20px;
             text-align: center;
-            margin-top: 50px;
+            margin-top: 40px;
         }
         
         .cta-section h2 {
             color: white;
             border: none;
-            font-size: 2.5em;
-            margin-bottom: 25px;
+            font-size: 1.6em;
+            margin-bottom: 20px;
             font-weight: 700;
         }
         
         .cta-section p {
-            font-size: 1.4em;
+            font-size: 1em;
             color: white;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
         
         .contact-placeholder {
             background: white;
             color: #E6002E;
-            padding: 20px 40px;
+            padding: 15px 25px;
             display: inline-block;
-            margin-top: 20px;
+            margin-top: 15px;
             font-weight: 700;
-            font-size: 1.2em;
+            font-size: 1em;
+            word-break: break-all;
         }
         
         .link-cta {
             color: white;
             font-weight: 700;
-            font-size: 1.15em;
+            font-size: 1em;
             text-decoration: underline;
             padding-bottom: 3px;
         }
@@ -245,8 +248,201 @@
         .link-text {
             color: #E6002E;
             font-weight: 700;
-            font-size: 1.15em;
+            font-size: 1em;
             text-decoration: underline;
+        }
+        
+        /* Tablet and larger screens */
+        @media (min-width: 768px) {
+            body {
+                padding: 40px;
+            }
+            
+            .poster {
+                box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            }
+            
+            .header {
+                padding: 50px 60px;
+            }
+            
+            .header h1 {
+                font-size: 2.8em;
+            }
+            
+            .header .subtitle {
+                font-size: 1.5em;
+            }
+            
+            .unibern-logo {
+                font-size: 1.1em;
+            }
+            
+            .unibe-logo-img {
+                height: 60px;
+            }
+            
+            .content {
+                padding: 50px 60px;
+            }
+            
+            .highlight-box {
+                padding: 35px 30px;
+            }
+            
+            .highlight-box h2 {
+                font-size: 1.9em;
+            }
+            
+            .highlight-box p {
+                font-size: 1.15em;
+            }
+            
+            .section h2 {
+                font-size: 2.2em;
+            }
+            
+            .section h3 {
+                font-size: 1.6em;
+            }
+            
+            .section p, .section li {
+                font-size: 1.1em;
+            }
+            
+            .benefits {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            
+            .benefit-card {
+                padding: 25px;
+            }
+            
+            .benefit-card h4 {
+                font-size: 1.3em;
+            }
+            
+            .benefit-card p {
+                font-size: 1em;
+            }
+            
+            .cta-section {
+                padding: 45px 40px;
+            }
+            
+            .cta-section h2 {
+                font-size: 2.2em;
+            }
+            
+            .cta-section p {
+                font-size: 1.3em;
+            }
+            
+            .contact-placeholder {
+                font-size: 1.1em;
+                padding: 18px 35px;
+            }
+            
+            .link-cta, .link-text {
+                font-size: 1.1em;
+            }
+        }
+        
+        /* Desktop screens */
+        @media (min-width: 1024px) {
+            .header {
+                padding: 60px 80px;
+            }
+            
+            .header h1 {
+                font-size: 3.5em;
+            }
+            
+            .header .subtitle {
+                font-size: 1.8em;
+            }
+            
+            .unibern-logo {
+                font-size: 1.2em;
+            }
+            
+            .unibe-logo-img {
+                height: 70px;
+            }
+            
+            .content {
+                padding: 60px 80px;
+            }
+            
+            .highlight-box {
+                padding: 40px;
+            }
+            
+            .highlight-box h2 {
+                font-size: 2.2em;
+            }
+            
+            .highlight-box p {
+                font-size: 1.3em;
+            }
+            
+            .project-title {
+                padding: 25px 30px;
+            }
+            
+            .project-title h3 {
+                font-size: 1.8em;
+            }
+            
+            .section h2 {
+                font-size: 2.5em;
+            }
+            
+            .section h3 {
+                font-size: 1.8em;
+            }
+            
+            .section p, .section li {
+                font-size: 1.2em;
+            }
+            
+            .benefits {
+                gap: 30px;
+            }
+            
+            .benefit-card {
+                padding: 30px;
+            }
+            
+            .benefit-card h4 {
+                font-size: 1.5em;
+            }
+            
+            .benefit-card p {
+                font-size: 1.1em;
+            }
+            
+            .cta-section {
+                padding: 50px;
+            }
+            
+            .cta-section h2 {
+                font-size: 2.5em;
+            }
+            
+            .cta-section p {
+                font-size: 1.4em;
+            }
+            
+            .contact-placeholder {
+                font-size: 1.2em;
+                padding: 20px 40px;
+            }
+            
+            .link-cta, .link-text {
+                font-size: 1.15em;
+            }
         }
         
         @media print {
@@ -351,7 +547,7 @@
                     <li>Pursuing or planning a Master's thesis</li>
                     <li>Interested in the intersection of perception, cognition, and sport performance</li>
                     <li>Motivated to develop rigorous assessment tools that bridge lab and field research</li>
-                    <li>Experienced with statistics, questionnaire development</li>
+                    <li>Experience with statistics, questionnaire development</li>
                 </ul>
                 <p><strong>Desirable but not essential:</strong> Passionate about contributing to elite sport science with real-world applications, applied psychology, or team sport participation</p>
             </div>
@@ -370,8 +566,8 @@
             <div class="cta-section">
                 <h2>Ready to Make Your Mark?</h2>
                 <p>This is your chance to pioneer a new assessment tool that will be used by researchers and practitioners in sport science for years to come.</p>
-                <p><strong>Contact us if you have any questions: Peripheralvisiongroup@gmail.com
-</strong></p>
+                <p><strong>Contact us if you have any questions:</strong></p>
+                <div class="contact-placeholder">Peripheralvisiongroup@gmail.com</div>
 
                 <p style="text-align: center; margin-top: 25px;">
                     <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=ejgA1C8h6kOsf3eqEteXflBO63yjQgdGqbU30PLSkxhURUpBMzRTSjZaM0UyR0tGWVUwRVc4TlFHQi4u" target="_blank" class="link-cta">
